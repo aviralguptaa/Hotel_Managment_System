@@ -23,7 +23,7 @@ class Room
 {
 public:
 	char type;
-	char stype;
+	char occtype;
 	char ac;
 	int roomNumber;
 	int rent;
@@ -44,12 +44,12 @@ Room Room::addRoom(int rno)
 {
 	class Room room;
 	room.roomNumber = rno;
-	cout << "\nType AC/Non-AC (A/N) : ";
+	cout << "\nType {AC/Non-AC (A/N)} : ";
 	cin >> room.ac;
-	cout << "\nType Comfort (S/N) : ";
+	cout << "\nType of Comfort {Suite/Deluxe (S/D)} : ";
 	cin >> room.type;
-	cout << "\nType Size (B/S) : ";
-	cin >> room.stype;
+	cout << "\nOccupancy {Single/Double/Triple/Group (S/D/T/G)} : ";
+	cin >> room.occtype;
 	cout << "\nDaily Rent : ";
 	cin >> room.rent;
 	room.status = 0;
@@ -93,10 +93,10 @@ void Room::searchRoom(int rno)
 
 void Room::displayRoom(Room tempRoom)
 {
-	cout << "\nRoom Number: \t" << tempRoom.roomNumber;
-	cout << "\nType AC/Non-AC (A/N) " << tempRoom.ac;
-	cout << "\nType Comfort (S/N) " << tempRoom.type;
-	cout << "\nType Size (B/S) " << tempRoom.stype;
+	cout << "\nRoom Number:\t" << tempRoom.roomNumber;
+	cout << "\nType AC/Non-AC (A/N) : " << tempRoom.ac;
+	cout << "\nType of Comfort {Suite/Deluxe (S/D)} : " << tempRoom.type;
+	cout << "\nOccupancy {Single/Double/Triple/Group (S/D/T/G)} : " << tempRoom.occtype;
 	cout << "\nRent: " << tempRoom.rent;
 }
 
