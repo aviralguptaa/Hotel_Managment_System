@@ -5,7 +5,7 @@
 #define max 100
 using namespace std;
 
-//Class Customer
+//Class for customer details
 class Customer
 {
 public:
@@ -18,6 +18,7 @@ public:
 	int booking_id;
 };
 
+// Class for room details
 class Room
 {
 public:
