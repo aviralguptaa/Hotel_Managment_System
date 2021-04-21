@@ -40,6 +40,7 @@ public:
 class Room rooms[max];
 int count = 0;
 
+// ReturnType ParentClass :: funcName(Arguments)
 Room Room::addRoom(int rno)
 {
 	class Room room;
@@ -59,6 +60,7 @@ Room Room::addRoom(int rno)
 	return room;
 }
 
+// ReturnType ParentClass :: funcName(Arguments)
 void Room::searchRoom(int rno)
 {
 	int i, found = 0;
@@ -94,7 +96,7 @@ void Room::searchRoom(int rno)
 void Room::displayRoom(Room tempRoom)
 {
 	cout << "\nRoom Number:\t" << tempRoom.roomNumber;
-	cout << "\nType AC/Non-AC (A/N) : " << tempRoom.ac;
+	cout << "\nType {AC/Non-AC (A/N)} : " << tempRoom.ac;
 	cout << "\nType of Comfort {Suite/Deluxe (S/D)} : " << tempRoom.type;
 	cout << "\nOccupancy {Single/Double/Triple/Group (S/D/T/G)} : " << tempRoom.occtype;
 	cout << "\nRent: " << tempRoom.rent;
